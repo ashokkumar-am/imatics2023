@@ -1,11 +1,17 @@
-import React from 'react'
+import LeftSidebar from '@/components/LeftSide';
+import MainContent from '@/components/MainContent';
+import Navbar from '@/components/Navbar';
 
-type Props = {}
-
-const dashboard = (props: Props) => {
+const DashboardPage = () => {
   return (
-    <div>dashboard</div>
-  )
-}
+    <div className="flex">
+      <Navbar />
+      <div className="flex">
+        <LeftSidebar />
+        <MainContent />
+      </div>
+    </div>
+  );
+};
 
-export default dashboard
+export default DashboardPage;
