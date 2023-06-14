@@ -46,25 +46,27 @@ const LeftSidebar: React.FC = () => {
       <ul className="flex flex-col space-y-2 flex-grow">
         {menuItems.map((item) => (
           <li key={item.id}>
-            <Link href={item.href} passHref>
-              <a
-                className={`p-2 ${selectedItem === item.title ? 'bg-blue-500 text-white' : ''} border border-gray-300`}
-                onClick={() => handleItemClick(item.title, item.href)}
-              >
-                {item.title}
-              </a>
+            <Link
+              href={item.href}
+              passHref
+              className={`p-2 ${selectedItem === item.title ? 'bg-blue-500 text-white' : ''} border border-gray-300`}
+              onClick={() => handleItemClick(item.title, item.href)}>
+
+              {item.title}
+
             </Link>
             {item.subItems && (
               <ul className="pl-4 mt-2">
                 {item.subItems.map((subItem) => (
                   <li key={subItem.id}>
-                    <Link href={subItem.href} passHref>
-                      <a
-                        className={`p-2 ${selectedItem === subItem.title ? 'bg-blue-500 text-white' : ''} border border-gray-300`}
-                        onClick={() => handleItemClick(subItem.title, subItem.href)}
-                      >
-                        {subItem.title}
-                      </a>
+                    <Link
+                      href={subItem.href}
+                      passHref
+                      className={`p-2 ${selectedItem === subItem.title ? 'bg-blue-500 text-white' : ''} border border-gray-300`}
+                      onClick={() => handleItemClick(subItem.title, subItem.href)}>
+
+                      {subItem.title}
+
                     </Link>
                   </li>
                 ))}
